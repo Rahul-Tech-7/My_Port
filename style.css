@@ -1,0 +1,1057 @@
+/* Importing Google Font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Reset default margins and paddings */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* For smooth scrolling */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Body basic styles */
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: #000;   /* Black background */
+  color: #f5f5f5;     /* Light text */
+}
+
+/* ================== NAVIGATION BAR ================== */
+nav {
+  position: fixed;         /* Stays on top */
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 1000;           /* Keeps above other elements */
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 234, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Padding top to prevent nav overlap */
+#home {
+  padding-top: 10vh;
+}
+
+/* Nav background changes on scroll */
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 5px 25px rgba(0, 234, 255, 0.4);
+}
+
+/* Nav container layout */
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Logo style */
+.logo {
+  color: #00eaff;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+}
+
+/* Hamburger & close icons (for mobile) */
+.hamburg, .cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #00eaff;
+  font-size: 2rem;
+  display: none;
+}
+
+/* Links inside nav */
+.nav-container .links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-container .links a {
+  position: relative;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s linear;
+}
+
+/* Underline effect */
+.nav-container .links a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #00eaff;
+  transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before,
+.nav-container .links a.active::before {
+  width: 100%;
+}
+
+/* Contact button style in nav */
+.nav-container .contact-btn {
+  background-color: transparent;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 2px solid #00eaff;
+  transition: 0.2s linear;
+}
+
+.nav-container .contact-btn a {
+  color: #00eaff;
+  transition: 0.3s linear;
+}
+
+.nav-container .contact-btn:hover,
+.nav-container .contact-btn:hover a {
+  background-color: #00eaff;
+  color: #000;
+}
+
+.nav-container .links a:hover {
+  color: #00eaff;
+}
+
+.nav-container .links a.active {
+  color: #00eaff;
+}
+
+/* Dropdown menu (mobile) */
+.dropdown {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  height: auto;
+  backdrop-filter: brightness(40%) blur(3px);
+  box-shadow: 0 0 20px black;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown.show {
+  transform: translateY(0);
+}
+
+.dropdown .links a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+  background-color: #00eaff;
+  color: #000;
+}
+
+/* ================== SECTIONS ================== */
+section {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+/* Home section main layout */
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-container .image {
+  z-index: 1;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container .content {
+  color: #f5f5f5;
+  width: 40%;
+  min-height: 100px;
+}
+
+/* Text styles */
+.content h1 {
+  font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+
+.content h1 span {
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+}
+
+/* Typewriter effect */
+.content .typewriter {
+  font-weight: 600;
+  font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+
+.content .typewriter span {
+  color: #00eaff;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+  position: relative;
+  transition: 0.3s linear;
+}
+
+/* Typewriter animation words */
+.typewriter span::before {
+  content: "Python Developer";
+  animation: words 15s infinite;
+}
+
+/* Blinking cursor effect */
+.typewriter span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #00eaff;
+  animation: cursor 0.6s linear infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #f5f5f5;
+  }
+}
+
+@keyframes words {
+  34%, 66% {
+    content: "Full Stack Developer";
+  }
+}
+
+/* Paragraph style */
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+  margin: 10px 0;
+  color: #ccc;
+}
+
+/* Social icons */
+.social-links i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid #00eaff;
+  border-radius: 50%;
+  color: #00eaff;
+  margin: 5px 10px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+
+.social-links i:hover {
+  scale: 1.2;
+  color: #000;
+  background-color: #00eaff;
+  filter: drop-shadow(0 0 15px #00eaff);
+}
+
+/* Resume button */
+.content button {
+  width: 40%;
+  height: 6vh;
+  margin: 30px;
+  background-color: #00eaff;
+  color: #000;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s linear;
+  margin-left: 11px;
+}
+
+.content button:hover {
+  scale: 1.1;
+  color: #00eaff;
+  border: 2px solid #00eaff;
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px rgba(0, 234, 255, 0.8);
+}
+
+/* ================== COMMON CONTENT CONTAINERS ================== */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-container h2 {
+    font-size: clamp(2rem, 3rem + 2vw, 4rem);
+    color: #00eaff;
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+/* ================== ABOUT SECTION ================== */
+.about-section {
+    padding: 80px 20px;
+}
+
+.about-section .about-content {
+    background-color: rgba(0, 234, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+    margin-top: 30px;
+    text-align: justify;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow animation on hover */
+.about-section .about-content::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(0, 234, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.about-section .about-content:hover::before {
+    top: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+}
+
+.about-section .about-content p {
+    font-size: clamp(0.8rem, 1rem + 1vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* ================== SKILLS SECTION ================== */
+.skills-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills-section h1 {
+    font-size: 4rem;
+    color: #00eaff;
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+    margin-bottom: 50px;
+}
+
+/* Container holding all skill categories */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Each category (Languages, Frontend, etc.) */
+.skill-category {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading of each skill category */
+.skill-heading {
+    font-size: 1.8rem;
+    color: #00eaff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.7);
+    font-weight: 600;
+    position: relative;
+}
+
+.skill-heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00eaff;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Skill items container */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Single skill box */
+.skill-item {
+    width: 140px;
+    height: 140px;
+    background-color: rgba(0, 234, 255, 0.1);
+    border: 2px solid #00eaff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
+    cursor: pointer;
+    padding: 12px;
+}
+
+/* Hover effect */
+.skill-item:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 12px 35px rgba(0, 234, 255, 0.7);
+    background-color: #00eaff;
+    color: #000;
+}
+
+/* Icon inside skill */
+.skill-item i {
+    font-size: 2.2rem;
+    color: #00eaff;
+    transition: inherit;
+}
+
+.skill-item:hover i {
+    color: #000;
+}
+
+/* Skill name text */
+.skill-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.2;
+    word-break: break-word;
+    white-space: normal;
+    color: #f5f5f5;
+    transition: inherit;
+}
+
+.skill-item:hover h3 {
+    color: #000;
+}
+
+/* Responsive adjustments for skills */
+@media (max-width: 884px) {
+    .skills-section h2 {
+        font-size: 2rem;
+    }
+
+    .skill-heading {
+        font-size: 1.4rem;
+    }
+
+    .skill-list {
+        gap: 20px;
+    }
+
+    .skill-item {
+        width: 115px;
+        height: 115px;
+    }
+
+    .skill-item i {
+        font-size: 1.8rem;
+    }
+
+    .skill-item h3 {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ================== EDUCATION SECTION ================== */
+.education-section {
+    padding: 80px 20px;
+    position: relative;
+}
+
+.education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Vertical line in timeline */
+.timeline-line {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, 
+        transparent, 
+        #00eaff, 
+        #00eaff, 
+        transparent);
+    z-index: 0;
+}
+
+/* Timeline item container */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-left: 80px;
+}
+
+/* Circle icon */
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00eaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00eaff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+    z-index: 2;
+}
+
+/* Content card */
+.timeline-content {
+    background-color: rgba(0, 234, 255, 0.08);
+    border: 2px solid rgba(0, 234, 255, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 234, 255, 0.6);
+    background-color: rgba(0, 234, 255, 0.15);
+}
+
+/* Glow background */
+.timeline-glow {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, 
+        rgba(0, 234, 255, 0.2) 0%, 
+        transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.timeline-content:hover .timeline-glow {
+    opacity: 1;
+}
+
+.timeline-content h3 {
+    color: #00eaff;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.timeline-content .institute {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #f5f5f5;
+}
+
+.timeline-content .duration {
+    font-size: 0.9rem;
+    color: #bbb;
+    display: block;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Responsive for timeline */
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-line {
+        left: 25px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-content .institute {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ================== PROJECTS SECTION ================== */
+.projects-section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Each project card */
+.project-card {
+    background-color: rgba(0, 234, 255, 0.08);
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 234, 255, 0.8);
+    background-color: rgba(0, 234, 255, 0.2);
+}
+
+/* Shiny overlay */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 50%, rgba(0, 234, 255, 0.2) 100%);
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+.project-card:hover::before {
+    transform: translateX(0);
+}
+
+/* Image in project */
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 234, 255, 0.5);
+    position: relative;
+    z-index: 5;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Project text */
+.project-content {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #00eaff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* Project GitHub link button */
+.project-card .project-link {
+    display: inline-block;
+    margin-top: auto;
+    padding: 8px 15px;
+    background-color: #00eaff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 20;
+}
+
+.project-card .project-link:hover {
+    background-color: #00c9e6;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.7);
+}
+
+.project-card .project-link i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* Ensure links clickable */
+.project-card * {
+    position: relative;
+    z-index: 25;
+}
+
+.project-link {
+    z-index: 30 !important;
+    position: relative;
+}
+
+
+/* ================== CONTACT SECTION ================== */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(0, 234, 255, 0.05);
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+}
+
+/* Contact info list */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+.info-box i {
+  font-size: 1.5rem;
+  color: #00eaff;
+}
+
+.info-box p {
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Contact form */
+.contact-form {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 180px; /* Bigger text area */
+}
+
+.contact-form button {
+  width: 140px;
+  padding: 12px;
+  background: #00eaff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #00c9e6;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 234, 255, 0.5);
+}
+
+
+/* ================== FOOTER ================== */
+footer {
+  background: #0d0d0d;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 234, 255, 0.2);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-info i {
+  color: #00eaff;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+/* ================== RESPONSIVE ================== */
+@media (max-width:884px) {
+  body {
+    overflow-y: visible;
+  }
+
+  nav .logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .nav-container .links {
+    display: none;
+  }
+
+  .hamburg,.cancel {
+    display: block;
+  }
+
+  .main-container .content {
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .cancel {
+    color: #00eaff;
+  }
+
+  .main-container .image {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .education-timeline::after {
+      content: none;
+  }
+
+  .timeline-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      text-align: left;
+      transform: translateX(0) !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+
+/* ================== IMAGE STYLING ================== */
+/* Blob container for profile image */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1/1;
+  margin-left: 40px;
+}
+
+.image-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 60% 40% 35% 65% / 60% 45% 55% 40%;
+  background: rgba(0, 234, 255, 0.4);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 35% 120% 35% 85% / 35% 110% 95% 85%;
+  overflow: hidden;
+  border: 6px solid #00eaff;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
+  z-index: 1;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive image adjustments */
+@media (max-width:600px) {
+  .image-container {
+    margin-left: 0;
+    max-width: 90%;
+  }
+}
+
+

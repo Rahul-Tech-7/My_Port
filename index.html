@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Makes website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- Website title -->
+    <title>My Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS animation library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- ================= NAVIGATION BAR ================= -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Rahul</span>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <a href="#home">Home</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <a href="#about">About</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <a href="#skills">Skills</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <a href="#education">Education</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu icon -->
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+
+        <!-- Dropdown for mobile -->
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <!-- Close icon -->
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HOME SECTION ================= -->
+    <section id="home">
+        <div class="main-container">
+            <!-- Left side: Image -->
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <div class="image-container">
+                    <div class="image-glow"></div>
+                    <div class="image-frame">
+                        <img src="./imgs/WhatsApp Image 2025-06-11 at 5.20.45 PM.jpeg" alt="My Photo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side: Text content -->
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Rahul</span></h1>
+
+                <!-- Typing effect -->
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                    I'm a <span></span>
+                </div>
+
+                <!-- Intro paragraph -->
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    I’m <strong>Rahul M</strong>, an aspiring Software Engineer with expertise in <strong>Python,
+                        JavaScript, Django, and SQL</strong>.
+                    I bring strong problem-solving skills, adaptability, and a focus on developing efficient, scalable
+                    full-stack solutions.
+                </p>
+
+                <!-- Social links -->
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/Rahul-Tech-7/"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rahul-m-cse/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/_.mr.rxhul._/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Resume button -->
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                    <button
+                        onclick="window.open('https://drive.google.com/drive/folders/15-S2ueZ-y7J27AACEqND6eHpdqGNqk2u?usp=sharing')">Download
+                        Resume</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about-section">
+        <div class="content-container">
+            <h2 data-aos="fade-down" data-aos-duration="1000">About Me</h2>
+            <div class="about-content">
+                <p data-aos="fade-right" data-aos-duration="1000">
+                    I am a <strong>motivated Software Developer</strong> with expertise in
+                    <strong>Python, JavaScript, Django, SQL, and full-stack web development</strong>.
+                    Skilled at building <strong>scalable and responsive applications</strong>, I enjoy turning
+                    complex problems into simple, efficient solutions.
+                </p>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    My projects include a <strong>Deep Learning system for Alzheimer’s diagnosis (99%
+                        accuracy)</strong>,
+                    an <strong>AI-powered car simulation</strong>, and multiple
+                    <strong>web-based management systems</strong>, showcasing strong problem-solving and
+                    end-to-end development skills.
+                </p>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                    I have completed an <strong>Embedded Systems Internship at Vaayusastra Aerospace</strong>
+                    (hardware–software integration and real-time debugging) and I am
+                    <strong>currently pursuing a Python Full Stack Development Internship at QSpiders,
+                        Marathahalli, Bangalore</strong>, where I am strengthening my expertise in
+                    <strong>frontend, backend, and database technologies</strong> through industry-focused
+                    training and live projects.
+                </p>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                    With strong <strong>analytical thinking, adaptability, and teamwork skills</strong>,
+                    I am eager to contribute as a <strong>full-stack engineer</strong> and grow within
+                    <strong>dynamic software development teams</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="skills-section">
+        <div class="content-container">
+            <h1 data-aos="fade-down" data-aos-duration="1000">Skills</h1>
+
+            <!-- Skills grid contains categories -->
+            <div class="skills-grid">
+
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3 class="skill-heading">Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fa-brands fa-python"></i>
+                            <h3>Python</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fa-brands fa-js"></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3 class="skill-heading">Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fa-brands fa-html5"></i>
+                            <h3>HTML5</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <h3>CSS3</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3 class="skill-heading">Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>SQL</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>PL/SQL (Basic)</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category">
+                    <h3 class="skill-heading">Frameworks</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>Django</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <h3>Bootstrap</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Concepts -->
+                <div class="skill-category">
+                    <h3 class="skill-heading">Tools & Concepts</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <h3>Git</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+                            <i class="fa-brands fa-github"></i>
+                            <h3>GitHub</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>VS Code</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1200">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Oracle SQL Plus</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1300">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>OOPs</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1400">
+                            <i class="fa-solid fa-sync"></i>
+                            <h3>AJAX</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1500">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <h3>Fetch API</h3>
+                        </div>
+                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1600">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <h3>REST API</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= EDUCATION SECTION ================= -->
+    <section id="education" class="education-section">
+        <div class="content-container">
+            <h2 data-aos="fade-down" data-aos-duration="1000">Education</h2>
+            <div class="education-timeline">
+                <!-- College -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>B.E. in Computer Science</h3>
+                        <p class="institute">Government College of Engineering, Dharmapuri</p>
+                        <span class="duration">2021-2025 | CGPA: 7.61</span>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <!-- HSC -->
+                <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>HSC (Class XII)</h3>
+                        <p class="institute">Government Higher Secondary School, Eriyur</p>
+                        <span class="duration">2020-2021 | Percentage: 87</span>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <!-- SSLC -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>SSLC (Class X)</h3>
+                        <p class="institute">Government High School, Ramakondahalli</p>
+                        <span class="duration">2018-2019 | Percentage: 86</span>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Vertical timeline line -->
+                <div class="timeline-line"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="projects-section">
+        <div class="content-container">
+            <h2 data-aos="fade-down" data-aos-duration="1000">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="./imgs/Alzheimer's.gif" alt="Diagnosis of Alzheimer's Disease">
+                    </div>
+                    <div class="project-content">
+                        <h3>Diagnosis of Alzheimer's Disease Using Deep Learning</h3>
+                        <p>Developed a CNN-Kalman filter hybrid system to classify MRI scans into Alzheimer's stages.
+                            Achieved up to 99% accuracy using Random Forest and XGBoost models.</p>
+                        <a href="https://github.com/Rahul-Tech-7/Alzheimer-Disease-Detection" target="_blank"
+                            class="project-link">
+                            GitHub Link <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="./imgs/AI_Car_Simulation.gif" alt="Driving AI Car Simulation">
+                    </div>
+                    <div class="project-content">
+                        <h3>Driving AI Car Simulation</h3>
+                        <p>Designed an AI-powered car simulation where a neural network learns to navigate a track and
+                            avoid obstacles. Implemented using Python with Pygame for simulation and genetic algorithms
+                            for self-learning.</p>
+                        <a href="https://github.com/Rahul-Tech-7/AI-Car-Simulation" target="_blank"
+                            class="project-link">
+                            GitHub Link <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="./imgs/Libray_Mangement.gif" alt="Library Management System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>Developed a web-based Library Management System with user and admin dashboards, book
+                            management, authentication, and transaction tracking features.</p>
+                        <a href="https://github.com/Rahul-Tech-7/Library-Management" target="_blank"
+                            class="project-link">
+                            GitHub Link <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="./imgs/ChatGPT Image Sep 11, 2025, 10_27_39 PM.png" alt="Human Following Robot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Human Following Robot</h3>
+                        <p>Built an embedded system robot capable of following human movement. Programmed
+                            microcontroller
+                            logic with real-time sensor data processing.</p>
+                        <a href="#" class="project-link">GitHub Link <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="900">
+                    <div class="project-image">
+                        <img src="./imgs/AI_Bot.gif" alt="AI ChatBot Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI ChatBot (In Progress)</h3>
+                        <p>Built a basic chatbot interface where users can interact with simple queries (e.g.,
+                            greetings,
+                            responses). Currently expanding functionality to handle broader queries and task automation.
+                        </p>
+                        <a href="#" class="project-link"> Soon..!<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact-section">
+        <div class="content-container">
+            <h3 class="small-title">get in touch</h3>
+            <h2 class="contact-title">CONTACT</h2>
+
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+91 63807 28868</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>rahul.techwhiz@gmail.com</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bangalore, India</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="7" placeholder="Your message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div id="successMessage" style="display:none; text-align:center; margin-top:20px;">
+                    <h2 style="color:#00eaff;">🎉 Thank <br>  You!</h2>
+                    <p>Your message has been sent successfully. <br> I’ll get back to you soon.</p>
+                </div>
+
+                <!-- Error Message (hidden by default) -->
+                <div id="errorMessage" style="display:none; text-align:center; margin-top:20px;">
+                    <h2 style="color:#ff4d4d;">⚠ Oops!</h2>
+                    <p>Something went wrong while sending your message.<br>Please try again later.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p><i class="fa-solid fa-envelope"></i> rahul.techwhiz@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 63807 28868</p>
+                <p><i class="fa-solid fa-location-dot"></i> Bangalore, India</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Rahul. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <!-- AOS animation library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ offset: 0 });
+
+        // Show dropdown menu (mobile)
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.classList.add("show");
+        }
+
+        // Close dropdown menu (mobile)
+        function cancel() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.classList.remove("show");
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Update active nav link
+            updateActiveNavLink();
+        });
+
+        // Update active navigation link based on scroll position
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-container .links a');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.scrollY >= (sectionTop - 100)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize active link on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            updateActiveNavLink();
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.dropdown a').forEach(link => {
+            link.addEventListener('click', function () {
+                cancel();
+            });
+        });
+
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault(); // stop page reload
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("https://formsubmit.co/rahul.techwhiz@gmail.com", {
+                    method: "POST",
+                    body: formData,
+                    headers: { "Accept": "application/json" }
+                });
+
+                if (response.ok) {
+                    form.style.display = "none";            // hide form
+                    successMessage.style.display = "block"; // show thank you
+                } else {
+                    form.style.display = "none";
+                    errorMessage.style.display = "block";   // show error
+                }
+            } catch (error) {
+                form.style.display = "none";
+                errorMessage.style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
